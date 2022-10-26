@@ -12,9 +12,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set BROWSER=none && react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --watchAll",
+    "mock": "json-server --routes mock/routes.json --watch mock/db.json --port 3333",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
